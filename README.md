@@ -1,4 +1,4 @@
-## Autenticação jwt usando lumen 8 e jwt-auth##
+## Autenticação jwt usando lumen 8 e jwt-auth
 
 **Seguir instruições do package jwt-auth:**
 [Instruções do Package](https://jwt-auth.readthedocs.io/en/develop/lumen-installation/)
