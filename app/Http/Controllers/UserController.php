@@ -14,11 +14,15 @@
 
         public function store(Request $request) {
 
-            return User::create([
+            $newUser = User::create([
                 'name' => $request->name,
                 'email' => $request->email,
                 'password' => Hash::make($request->password)
             ]);
+            $newUser->roles()->attach([1,2]);//admin e guest
+
+
+            return $newUser;
         }
 
         public function login(Request $request){
@@ -35,6 +39,7 @@
         }
 
         public function show(Request $request) {
-            return auth()->user();
+            #return auth()->user();
+            dd(auth()->payload()->toArray());
         }
     }
